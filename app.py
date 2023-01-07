@@ -35,6 +35,41 @@ def Welcome():
         f"<b>Welcome</b>"
     )
 
+# Sightings route
+@app.route("/api/v1.0/sightings")
+def sightings():
+     # Create our session (link) from Python to the DB
+    session = Session(engine)
+
+    # Query all sightings
+    sightings_data = session.query(Sighting.date,Sighting.city,Sighting.state,Sighting.country,Sighting.shape,Sighting.duration,
+                                   Sighting.summary,Sighting.posted,Sighting.images,Sighting.reportnum,Sighting.location,Sighting.latitude,
+                                   Sighting.longitude).all()
+    # print(sightings_data[0])
+    session.close()
+
+
+    sightings_list = []
+
+    for sight in sightings_data:
+        sightings_dict={}
+        sightings_dict["Report Num"]= sight.reportnum
+        sightings_dict["Date"]= sight.date
+        sightings_dict["City"]= sight.city
+        sightings_dict["State"]= sight.state
+        sightings_dict["Country"]= sight.country
+        sightings_dict["Shape"]= sight.shape
+        sightings_dict["Duration"]= sight.duration
+        sightings_dict["Summary"]= sight.summary
+        sightings_dict["Posted Date"]= sight.posted
+        sightings_dict["Images"]= sight.images
+        sightings_dict["Location"]= sight.location
+        sightings_dict["Latitude"]= sight.latitude
+        sightings_dict["Longitude"]= sight.longitude
+        sightings_list.append(sightings_dict)
+        
+    return jsonify(sightings_list)
+
 # app.run statement
 if __name__ == '__main__':
     app.run(debug=True)

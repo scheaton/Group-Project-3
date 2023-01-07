@@ -1,4 +1,4 @@
-DROP TABLE if exists sightings;
+DROP TABLE if exists sighting;
 
 CREATE TABLE sighting (
 Date Varchar,
@@ -15,4 +15,4 @@ Location varchar,
 Latitude decimal,
 Longitude decimal);
 
-select * from sightings;
+select * from sighting;

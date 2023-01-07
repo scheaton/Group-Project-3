@@ -2,7 +2,7 @@ import sqlalchemy
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine,func
-from flask import Flask,jsonify
+from flask import Flask,jsonify, render_template
 import pandas as pd
 from config import db_url
 
@@ -34,6 +34,9 @@ def Welcome():
     return(
         f"<b>Welcome</b>"
     )
+# def index():
+#     return render_template("index.html")
+ 
 
 # Sightings route
 @app.route("/api/v1.0/sightings")

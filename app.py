@@ -54,8 +54,10 @@ def sightings():
 
     sightings_list = []
 
+
     for sight in sightings_data:
         sightings_dict={}
+        coordinates_dict={}
         sightings_dict["Report Num"]= sight.reportnum
         sightings_dict["Date"]= sight.date
         sightings_dict["City"]= sight.city
@@ -67,8 +69,10 @@ def sightings():
         sightings_dict["Posted Date"]= sight.posted
         sightings_dict["Images"]= sight.images
         sightings_dict["Location"]= sight.location
-        sightings_dict["Latitude"]= sight.latitude
-        sightings_dict["Longitude"]= sight.longitude
+        coordinates_dict["Latitude"]=sight.latitude
+        coordinates_dict["Longitude"]=sight.longitude
+        # sightings_dict["Coordinates"]=[sight.latitude,sight.longitude]
+        sightings_dict["Coordinates"]=coordinates_dict
         sightings_list.append(sightings_dict)
         
     return jsonify(sightings_list)

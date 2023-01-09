@@ -1,7 +1,9 @@
 <!doctype html>
+<html lang="en-us">
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>US_UFO_Sightings</title>
     <!-- reset styling -->
     <link rel="stylesheet" href="css/reset.css">
@@ -18,18 +20,37 @@
 <body>
 
   <div id="container">
-    <video id="background_video" loop muted></video>
-    <div id="video_cover"></div>
-    <div id="overlay"></div>
 
-    <div id="video_controls">
-      <span id="play">
-        <img src="plugin_bideo/play.png">
-      </span>
-      <span id="pause">
-        <img src="plugin_bideo/pause.png">
-      </span>
-    </div>
+    <!-- Create a <canvas> element -->
+    <canvas id="canvas-image-blending"></canvas>
+
+    <!-- Call the script -->
+    <script src="plugin_granim/dist/granim.js"></script>
+
+    <!-- Create a Granim instance -->
+    <script>
+    let granimInstance = new Granim({
+        element: '#canvas-image-blending',
+        direction: 'top-bottom',
+        isPausedWhenNotInView: true,
+        image : {
+            source: "../Group-Project-3/plugin_granim/docs/assets/img/bg-forest-fullscreen.jpg",
+            blendingMode: 'multiply',
+            stretchMode: ['stretch', 'stretch'],
+        },
+        states : {
+            "default-state": {
+                gradients: [
+                    ['#29323c', '#485563'],
+                    ['#FF6B6B', '#556270'],
+                    ['#80d3fe', '#7ea0c4'],
+                    ['#f0ab51', '#eceba3']
+                ],
+                transitionSpeed: 9000
+            }
+        }
+    });
+    </script>
 
     <!-- Start of navbar -->
     <nav class="navbar navbar-expand m-0 p-0">
@@ -43,7 +64,7 @@
                 <a href="index.html" class="nav-link">Sightings Heatmap</a>
             </li>
             <li class="nav-item">
-                <a href="UFO_shapes.html" class="nav-link">UFO Shapes</a> <!-- pie charts -->
+                <a href="index.html" class="nav-link">UFO Shapes</a> <!-- pie charts -->
             </li>
             <li class="nav-item">
                 <a href="index.html" class="nav-link">Sightings by Time of Day</a>
@@ -54,18 +75,23 @@
     </nav>
     <!-- End of navbar -->
 
-    <section id="main_content">
-      <div id="head">
-        <h1>The truth is out there.</h1>
-        <p class="sub_head">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <div class="row">
+      <div class="col-6">
+        <!-- Start of State Pie Chart -->
+        
+        <!-- End of State Pie Chart -->
       </div>
 
-    </section>
+
+
+
+    </div>
+
   </div>
 
   <div id="footer">
-    <a href="https://www.youtube.com/watch?v=w7JrHIHi8t0" target="_blank">
-      Video by shortenit
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+      Lorem ipsum dolor.
     </a>
   </div>
 

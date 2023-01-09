@@ -1,6 +1,6 @@
 let usStates = [
     { name: 'ALABAMA', abbreviation: 'AL'},
-    { name: 'ALASKA', abbreviation: 'AK'},
+    { name: 'ALasKA', abbreviation: 'AK'},
     { name: 'AMERICAN SAMOA', abbreviation: 'AS'},
     { name: 'ARIZONA', abbreviation: 'AZ'},
     { name: 'ARKANSAS', abbreviation: 'AR'},

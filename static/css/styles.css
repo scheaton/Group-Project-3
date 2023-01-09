@@ -3,35 +3,6 @@
   background-color: transparent;
   padding-inline: 10px;
 }
-#home-button {
-  font-weight: bold;
-  font-size: 20px;
-  color: whitesmoke;
-  letter-spacing: 1px;
-  margin-left: 5px;
-  margin-top: 5px;
-  background-color: rgba(255,255,255,0.20);
-  border: 2px solid rgba(255,255,255,0.20);
-  border-radius: 10px;
-  padding: 5px;
-}
-.nav-item a {
-  cursor: pointer;
-  border-radius: 3px;
-
-  border: 2px solid rgba(255,255,255,0.20);
-  border-radius: 30px;
-  font-size: 12px;
-  color: whitesmoke;
-  letter-spacing: 1px;
-  display: inline-block;
-  margin-right: 5px;
-  margin-top: 5px;
-  background-color: rgba(255,255,255,0.20);
-}
-.nav-item:active {
-  background-color: gray;
-}
 
 /* plugin_bideo */
 html, body {
@@ -88,7 +59,7 @@ html, body {
   }
 }
 
-/* Demo page specific styles */
+/* index page specific styles */
 
 body {
   text-align: center;
@@ -105,67 +76,15 @@ body {
   background: rgba(0,0,0,0.5);
 }
 
-#main_content {
-  z-index: 2;
-  position: relative;
-  display: inline-block;
-
-  /* Vertical center */
-  top: 40%;
-  transform: translateY(-50%);
-}
-
-#main_content h1 {
-  text-transform: uppercase;
-  font-weight: 600;
-  font-family: 'proxima-nova-condensed', Helvetica;
-  color: #fff;
-  font-size: 35px;
-}
-
-#main_content .sub_head {
-  color: rgba(255,255,255,0.5);
-  font-size: 18px;
-}
-
-#main_content .info {
-  color: rgba(255,255,255,0.5);
-  font-size: 12px;
-  margin-top: 10px;
-}
-
-#links {
-  margin-top: 50px;
-}
-
-#links a {
-  border: 2px solid rgba(255,255,255,0.20);
-  border-radius: 61px;
-  font-size: 12px;
-  color: #FFFFFF;
-  letter-spacing: 1px;
-  text-decoration: none;
-  text-transform: uppercase;
-  padding: 10px 25px;
-  display: inline-block;
-  margin-right: 15px;
-}
-
 #footer {
   position: absolute;
-  bottom: 0; left: 0; right: 0;
+  bottom: 0; right: 0;
 }
 #footer a {
   color: rgba(255,255,255,0.5);
   text-decoration: none;
   margin: 10px;
   font-size: 12px;
-}
-#footer a:first-child {
-  float: left;
-}
-#footer a:last-child {
-  float: right;
 }
 
 /* Granim plugin */
@@ -180,22 +99,40 @@ body {
   left: 0;
 }
 
-/*  */
+/* styles */
 .content-background {
-  z-index: 5;
-  font-weight: bold;
-  font-size: 20px;
-  color: whitesmoke;
+  z-index: 2;
+  font-size: 16px;
+  text-decoration-line: none;
+  color: black;
   letter-spacing: 1px;
   margin-inline: 5px;
   margin-top: 5px;
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 2px solid rgba(255,255,255,0.8);
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 2px solid rgba(255,255,255,0.5);
   border-radius: 10px;
   padding: 5px;
   justify-content: center;
 }
 
-.content-background h3 {
+@media (max-width: 768px) {
+  .content-background {
+    font-size: 14px;
+    letter-spacing: 0px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .navbar {
+    padding-inline: 5px;
+  }
+}
+
+a:hover {
   color: black;
+  background-color: whitesmoke;
+}
+
+#selectedStateName {
+  display: inline;
+  text-transform: capitalize;
 }

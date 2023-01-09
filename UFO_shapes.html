@@ -50,34 +50,34 @@
 
   <!-- Start of navbar -->
   <nav class="navbar navbar-expand m-0 p-0">
-    <a href="index.html" class="navbar-brand" id="home-button">Home</a>
+    <a href="index.html" class="content-background" id="home-button">Home</a>
     <div class="collapse navbar-collapse justify-content-end" id="main-nav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a href="index.html" class="nav-link">Sightings Heatmap</a>
+          <a href="index.html" class="content-background">Sightings Heatmap</a>
         </li>
         <li class="nav-item">
-          <a href="UFO_shapes.html" class="nav-link">UFO Shapes</a> <!-- pie charts -->
+          <a href="UFO_shapes.html" class="content-background">UFO Shapes</a> <!-- pie charts -->
         </li>
         <li class="nav-item">
-          <a href="index.html" class="nav-link">Sightings by Time of Day</a>
+          <a href="index.html" class="content-background">Sightings by Time of Day</a>
         </li>
       </ul>
     </div>
   </nav>
   <!-- End of navbar -->
 
-  <div class="container-fluid">
-    <div class="row justify-content-center">
-      <div class="col-md-5 content-background" id="selectedStateName">
+  <div class="container-fluid align-content-center">
+    <div class="row justify-content-center align-content-center">
+      <div class="col-md-5 content-background">
         <!-- Start of State Pie Chart -->
-        <h3>Alabama<select id="selDataset" onchange="optionChanged(this.value)"></select></h3>
+        <h3 id="selectedStateName">ALABAMA  </h3><select id="selectedStateAbbrev" onchange="optionChanged(this.value)"></select>
         <div id="statePieChart"></div>
         <!-- End of State Pie Chart -->
       </div>
       <div class="col-md-5 content-background">
         <!-- Start of National Pie Chart -->
-        <h3>United States</h3>
+        <h3>UNITED STATES</h3>
         <div id="usPieChart"></div>
         <!-- End of State Pie Chart -->
       </div>

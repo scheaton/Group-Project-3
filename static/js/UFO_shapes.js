@@ -1,7 +1,7 @@
 
 function init() {
 
-    let dropDown = d3.select('#selDataset');
+    let dropDown = d3.select('#selectedStateAbbrev');
 
     for (let i = 0; i < usStates.length; i++) {
         dropDown.append("option").text(usStates[i].abbreviation);
@@ -37,21 +37,24 @@ function init() {
 
 };
 
-// Update all the plots when a new state is selected.
-d3.selectAll("#selDataset").on("change", optionChanged);
+// Update state pie chart when a new state is selected.
+d3.selectAll("#selectedStateAbbrev").on("change", optionChanged);
 
 function optionChanged() {
-    let dropdownMenu = d3.select("#selDataset");
     // Assign the value of the dropdown menu option to a letiable
-    let selectedId = dropdownMenu.property("value");
-    // Update to new selected individual data
-    let stateData = [{
-        values: [4,5,6], // values
-        labels: ['d','e','f'], // shape names
-    }]
+    let newStateAbbrev = d3.select("#selectedStateAbbrev").property("value");
+    // Update the name of the State
+    let newStateName = usStates.find(item => (item.abbreviation == newStateAbbrev)).name;
+    let stateName = d3.select('#selectedStateName');
+    stateName.text(newStateName + "  ");
+    // Update to new selected state data
+    let stateData = {
+        values: [[4,5,6]], // values
+        labels: [['d','e','f']], // shape names
+    }
 
-    Plotly.restyle('statePieChart', stateData);
-                    
+    Plotly.restyle('statePieChart', stateData, [0]);
+      
 
 };
 

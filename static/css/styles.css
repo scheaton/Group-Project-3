@@ -60,31 +60,16 @@ html, body {
 }
 
 /* index page specific styles */
-
-body {
-  text-align: center;
-  font-family: 'proxima-nova', Helvetica;
-}
-
-#container {
-  height: 100%;
-}
-
 #overlay {
   position: absolute;
   top: 0; right: 0; left: 0; bottom: 0;
   background: rgba(0,0,0,0.5);
 }
 
-#footer {
+#index_page {
   position: absolute;
-  bottom: 0; right: 0;
-}
-#footer a {
-  color: rgba(255,255,255,0.5);
-  text-decoration: none;
-  margin: 10px;
-  font-size: 12px;
+  top: 40%;
+  text-align: center;
 }
 
 /* Granim plugin */
@@ -101,7 +86,7 @@ body {
 
 /* styles */
 .content-background {
-  z-index: 2;
+  z-index: 3;
   font-size: 16px;
   text-decoration-line: none;
   color: black;
@@ -112,11 +97,10 @@ body {
   border: 2px solid rgba(255,255,255,0.5);
   border-radius: 10px;
   padding: 5px;
-  justify-content: center;
 }
 
-@media (max-width: 768px) {
-  .content-background {
+@media (max-width: 768px) { /* Navbar has to shrink. Otherwise, */
+  .content-background {     /* the options wrap and look weird. */
     font-size: 14px;
     letter-spacing: 0px;
     margin-left: 5px;
@@ -127,12 +111,32 @@ body {
   }
 }
 
-a:hover {
+a:hover {   /* links light up when hovered over and overwrite default blue */
   color: black;
   background-color: whitesmoke;
 }
 
-#selectedStateName {
+#selectedStateName {  /* dropdown on the same line as current state name */
   display: inline;
   text-transform: capitalize;
+  text-align: center;
+}
+
+select {
+  text-align: center;
+}
+
+.row {
+  text-align: center;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0; right: 0;
+}
+#footer a {
+  color: rgba(255,255,255,0.5);
+  text-decoration: none;
+  margin: 10px;
+  font-size: 12px;
 }

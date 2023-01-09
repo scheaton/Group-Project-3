@@ -60,6 +60,10 @@ html, body {
 }
 
 /* index page specific styles */
+body {
+  text-align: center;
+}
+
 #overlay {
   position: absolute;
   top: 0; right: 0; left: 0; bottom: 0;
@@ -70,6 +74,8 @@ html, body {
   position: absolute;
   top: 40%;
   text-align: center;
+  left: 30%;
+  right: 30%;
 }
 
 /* Granim plugin */

@@ -179,3 +179,23 @@ body {
   bottom: 0;
   left: 0;
 }
+
+/*  */
+.content-background {
+  z-index: 5;
+  font-weight: bold;
+  font-size: 20px;
+  color: whitesmoke;
+  letter-spacing: 1px;
+  margin-inline: 5px;
+  margin-top: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 2px solid rgba(255,255,255,0.8);
+  border-radius: 10px;
+  padding: 5px;
+  justify-content: center;
+}
+
+.content-background h3 {
+  color: black;
+}

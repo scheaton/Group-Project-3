@@ -1,7 +1,7 @@
 DROP TABLE if exists sighting;
 
 CREATE TABLE sighting (
-Date Varchar,
+Date TIMESTAMP,
 City TEXT,
 State TEXT,
 Country TEXT,

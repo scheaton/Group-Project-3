@@ -23,23 +23,54 @@ Sighting = Base.classes.sighting
 #################################################
 # Flask Setup
 #################################################
-app = Flask(__name__, template_folder='/templates')
+app = Flask(__name__)
 
 #################################################
 # Flask Routes
 #################################################
 # Home route
 @app.route("/")
-def Welcome():
-    return(
-        f"<b>Welcome</b>"
-    )
-def home():
-    return render_template("index.html")
- 
+# def Welcome():
+#     return(
+#         f"<b>Welcome</b>"
+#     )
+def index():
+    return render_template("index.html", pages={
+        "index": "active",
+        "sightings_map": "",
+        "sightings_trends": "",
+        "ufo shapes": ""
+    })
+
+@app.route("/sightings_map/")
+def sightings_map():
+    return render_template("Sightings_Map.html", pages={
+        "home": "",
+        "sightings_map": "active",
+        "sightings_trends": "",
+        "ufo shapes": ""
+    })
+
+@app.route("/sightings_trends/")
+def sightings_trends():
+    return render_template("Sightings_Trends.html", pages={
+        "home": "",
+        "sightings_map": "",
+        "sightings_trends": "active",
+        "ufo shapes": ""
+    })
+
+@app.route("/ufo_shapes/")
+def ufo_shapes():
+    return render_template("UFO_shapes.html", pages={
+        "home": "",
+        "sightings_map": "",
+        "sightings_trends": "",
+        "ufo shapes": "active"
+    })
 
 # Sightings route
-@app.route("/api/v1.0/sightings")
+@app.route("/api/v1.0/sightings/")
 def sightings():
      # Create our session (link) from Python to the DB
     session = Session(engine)

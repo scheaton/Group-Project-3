@@ -18,7 +18,7 @@ Base = automap_base()
 Base.prepare(engine,reflect=True)
 
 # Save reference to the table
-Sighting = Base.classes.sightings
+Sighting = Base.classes.sighting
 
 #################################################
 # Flask Setup

@@ -23,7 +23,7 @@ Sighting = Base.classes.sighting
 #################################################
 # Flask Setup
 #################################################
-app = Flask(__name__)
+app = Flask(__name__, template_folder='/templates')
 
 #################################################
 # Flask Routes
@@ -34,8 +34,8 @@ def Welcome():
     return(
         f"<b>Welcome</b>"
     )
-# def index():
-#     return render_template("index.html")
+def home():
+    return render_template("index.html")
  
 
 # Sightings route

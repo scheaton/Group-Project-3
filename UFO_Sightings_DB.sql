@@ -22,7 +22,7 @@ DROP TABLE if exists states;
 CREATE TABLE states (
 id int Primary key,
 State TEXT,
-Count int);
+Sightings int);
 
 select * from states;
 

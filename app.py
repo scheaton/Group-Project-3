@@ -36,37 +36,37 @@ app = Flask(__name__)
 #     )
 def index():
     return render_template("index.html", pages={
-        "index": "active",
-        "sightings_map": "",
-        "sightings_trends": "",
-        "ufo shapes": ""
+        "Home": "active",
+        "Sightings_Map": "",
+        "Sightings_Trends": "",
+        "UFO_Shapes": ""
     })
 
-@app.route("/sightings_map/")
+@app.route("/Sightings_Map")
 def sightings_map():
     return render_template("Sightings_Map.html", pages={
-        "home": "",
-        "sightings_map": "active",
-        "sightings_trends": "",
-        "ufo shapes": ""
+        "Home": "",
+        "Sightings_Map": "active",
+        "Sightings_Trends": "",
+        "UFO_Shapes": ""
     })
 
-@app.route("/sightings_trends/")
+@app.route("/Sightings_Trends")
 def sightings_trends():
     return render_template("Sightings_Trends.html", pages={
-        "home": "",
-        "sightings_map": "",
-        "sightings_trends": "active",
-        "ufo shapes": ""
+        "Home": "",
+        "Sightings_Map": "",
+        "Sightings_Trends": "active",
+        "UFO_Shapes": ""
     })
 
-@app.route("/ufo_shapes/")
+@app.route("/UFO_Shapes")
 def ufo_shapes():
     return render_template("UFO_shapes.html", pages={
-        "home": "",
-        "sightings_map": "",
-        "sightings_trends": "",
-        "ufo shapes": "active"
+        "Home": "",
+        "Sightings_Map": "",
+        "Sightings_Trends": "",
+        "UFO_Shapes": "active"
     })
 
 # Sightings route

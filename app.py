@@ -62,7 +62,7 @@ def sightings_trends():
 
 @app.route("/UFO_Shapes")
 def ufo_shapes():
-    return render_template("UFO_shapes.html", pages={
+    return render_template("UFO_Shapes.html", pages={
         "Home": "",
         "Sightings_Map": "",
         "Sightings_Trends": "",

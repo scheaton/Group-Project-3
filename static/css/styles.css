@@ -146,3 +146,9 @@ select {
   margin: 10px;
   font-size: 12px;
 }
+
+#map,
+body,
+html {
+  height: 100%;
+}

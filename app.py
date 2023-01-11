@@ -19,6 +19,8 @@ Base.prepare(engine,reflect=True)
 
 # Save reference to the table
 Sighting = Base.classes.sighting
+State = Base.classes.states
+Month = Base.classes.months
 
 #################################################
 # Flask Setup
@@ -62,7 +64,7 @@ def sightings_trends():
 
 @app.route("/UFO_Shapes")
 def ufo_shapes():
-    return render_template("UFO_shapes.html", pages={
+    return render_template("UFO_Shapes.html", pages={
         "Home": "",
         "Sightings_Map": "",
         "Sightings_Trends": "",
@@ -107,6 +109,44 @@ def sightings():
         sightings_list.append(sightings_dict)
         
     return jsonify(sightings_list)
+
+@app.route("/api/v1.0/sightingsbystate/")
+def sightings_state():
+      # Create our session (link) from Python to the DB
+    session = Session(engine)
+
+    state_data = session.query(State.id,State.state,State.sightings).all()
+
+    session.close()
+
+    state_list=[]
+    for data in state_data:
+        state_dict={}
+        # state_dict["Id"]=data.id
+        state_dict["state"]=data.state
+        state_dict["sightings"]=data.sightings
+        state_list.append(state_dict)
+
+    return jsonify(state_list)
+
+@app.route("/api/v1.0/sightingsbymonth/")
+def sightings_month():
+    # Create our session (link) from Python to the DB
+    session = Session(engine)
+
+    month_data = session.query(Month.id,Month.date,Month.sightings).all()
+
+    session.close()
+
+    month_list=[]
+    for data in month_data:
+        month_dict={}
+        month_dict["Date/Time"]=data.date.strftime("%B")
+        month_dict["sightings"]=data.sightings
+        month_list.append(month_dict)
+
+    return jsonify(month_list)
+
 
 # app.run statement
 if __name__ == '__main__':

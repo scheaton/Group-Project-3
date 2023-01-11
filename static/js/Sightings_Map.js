@@ -1,5 +1,11 @@
 // leaflet
 
+d3.json(url).then(function(data){
+    createFeatures(data.features);
+    console.log(data)
+});
+
+function createHeatMap(sightingsData)
 
 function createMap(sightings){
     var street = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -15,12 +21,15 @@ function createMap(sightings){
         "Street Map": street, 
         "Topographic Map": topo
     }
+
+
     
     var myMap = L.map("map", {
         center: [
             37.09, -95.71
          ], 
-         zoom: 4
+         zoom: 4, 
+         layers: street, sightings
         })
 
 };

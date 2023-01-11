@@ -16,3 +16,13 @@ Latitude decimal,
 Longitude decimal);
 
 select * from sighting;
+
+DROP TABLE if exists states;
+
+CREATE TABLE states (
+id int Primary key,
+State TEXT,
+Count int);
+
+select * from states;
+

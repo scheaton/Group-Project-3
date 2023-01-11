@@ -16,30 +16,29 @@ function init() {
     };
 
     // Trace1 for the State Data
-    let trace1 = {
+    let trace = {
         x: names,
         y: sightings,
         text: names,
-        name: "States",
+        // name: "States",
         type: "bar"
     };
 
     // Create data array
-    let data = [trace1];
+    let data = [trace];
 
     // Apply title
     let layout = {
         title: "Sightings by Month",
-        barmode: "group",
 
-        // Include margins 
-        margin: {
-            l: 50,
-            r: 50,
-            b: 200,
-            t: 50,
-            pad: 4
-        }
+        // // Include margins 
+        // margin: {
+        //     l: 50,
+        //     r: 50,
+        //     b: 200,
+        //     t: 50,
+        //     pad: 4
+        // }
     };
 
     // Render the plot 

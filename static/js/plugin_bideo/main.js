@@ -22,11 +22,11 @@
     // of different video formats to add
     src: [
       {
-        src: '../static/img/UFO_montage.mp4',
+        src: 'static/img/UFO_montage.mp4',  //"{{url_for('static', filename='img/UFO_montage.mp4')}}"
         type: 'video/mp4'
       },
       {
-        src: '../static/img/UFO_montage.webm',
+        src: 'static/img/UFO_montage.webm',
         type: 'video/webm;codecs="vp8, vorbis"'
       }
     ],

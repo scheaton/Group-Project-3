@@ -23,9 +23,9 @@
   <!-- Create a <canvas> element -->
   <canvas id="canvas-image-blending"></canvas>
   <!-- Call the Granim Plugin script -->
-  <script src="{{url_for('static', filename='js/plugin_granim/dists/granim.js')}}" async></script>
+  <script src="{{url_for('static', filename='js/plugin_granim/dists/granim.js')}}"></script>
   <!-- Create a Granim instance -->
-  <script src="{{url_for('static', filename='js/visualization_bg.js')}}" async></script>
+  <script src="{{url_for('static', filename='js/visualization_bg.js')}}"></script>
   <!-- End of background -->
 
 
@@ -38,6 +38,7 @@
 
   <!-- Start of Visualization -->
   <div class="container-fluid">
+    <div id = "map">
     <div class="row justify-content-center">
       <div class="col-md-11 content-background">
         <!-- Start of State Pie Chart -->
@@ -46,6 +47,7 @@
       </div>
     </div>
   </div>
+</div>
   <!-- End of Visualization -->
 
 
@@ -59,7 +61,7 @@
   <script src="https://d3js.org/d3.v5.min.js"></script>
   <script src='https://cdn.plot.ly/plotly-2.16.1.min.js'></script>
   <!-- <script src="./static/js/usStates.js"></script> -->
-  <script src="{{url_for('static', filename='js/Sightings_Map.js')}}" async></script>
+  <script src="{{url_for('static', filename='js/Sightings_Map.js')}}"></script>
 
 </body>
 

@@ -26,3 +26,12 @@ Count int);
 
 select * from states;
 
+DROP TABLE if exists months;
+
+CREATE TABLE months (
+id int Primary key,
+Date Timestamp,
+Sightings int);
+
+select * from months;
+

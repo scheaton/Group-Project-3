@@ -22,7 +22,7 @@ d3.json(state_url).then(function (data) {
 
     //layout
     let layout = {
-        title: 'Sightings By State',
+        title: 'Sightings By State (Jul - Dec 2022)',
         xaxis: { title: 'State' },
         yaxis: { title: 'Sightings Number' }
     }
@@ -56,7 +56,7 @@ d3.json(month_url).then(function (data) {
 
     //layout
     let layout = {
-        title: 'Sightings By Month',
+        title: 'Sightings By Month (Jul - Dec 2022)',
         xaxis: { title: 'Month' },
         yaxis: { title: 'Sightings Number' }
     }
@@ -91,11 +91,11 @@ d3.json(hour_url).then(function (data) {
 
     //layout
     let layout = {
-        title: 'Sightings By Hour of Day (UTC)',
+        title: 'Sightings By Hour of Day (UTC) (Jul - Dec 2022)',
         xaxis: { autotick: false,
             ticks: 'outside',
             tickangle: 90,
-            title: 'Hour' },
+            title: 'Hour (UTC)' },
         yaxis: { title: 'Sightings Number' }
     }
 

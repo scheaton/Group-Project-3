@@ -84,36 +84,34 @@ def sightings():
     # print(sightings_data[0])
     session.close()
 
-    for _ in sightings_data:
-        print(dict(_))
-
-
-    sightings_list = [dict(_) for _ in sightings_data]
-    return jsonify(sightings_list)
-
-
-    # for sight in sightings_data:
-    #     print(dict(sight))
-    #     sightings_dict={}
-    #     coordinates_dict={}
-    #     sightings_dict["Report Num"]= sight.reportnum
-    #     sightings_dict["Date"]= sight.date
-    #     sightings_dict["City"]= sight.city
-    #     sightings_dict["State"]= sight.state
-    #     sightings_dict["Country"]= sight.country
-    #     sightings_dict["Shape"]= sight.shape
-    #     sightings_dict["Duration"]= sight.duration
-    #     sightings_dict["Summary"]= sight.summary
-    #     sightings_dict["Posted Date"]= sight.posted
-    #     sightings_dict["Images"]= sight.images
-    #     sightings_dict["Location"]= sight.location
-    #     coordinates_dict["Latitude"]=sight.latitude
-    #     coordinates_dict["Longitude"]=sight.longitude
-    #     # sightings_dict["Coordinates"]=[sight.latitude,sight.longitude]
-    #     sightings_dict["Coordinates"]=coordinates_dict
-    #     sightings_list.append(sightings_dict)
-        
+    # for _ in sightings_data:
+    #     print(dict(_))
+    # sightings_list = [dict(_) for _ in sightings_data]
     # return jsonify(sightings_list)
+
+    sightings_list=[]
+    for sight in sightings_data:
+        # print(dict(sight))
+        sightings_dict={}
+        coordinates_dict={}
+        sightings_dict["Report Num"]= sight.reportnum
+        sightings_dict["Date"]= sight.date
+        sightings_dict["City"]= sight.city
+        sightings_dict["State"]= sight.state
+        sightings_dict["Country"]= sight.country
+        sightings_dict["Shape"]= sight.shape
+        sightings_dict["Duration"]= sight.duration
+        sightings_dict["Summary"]= sight.summary
+        sightings_dict["Posted Date"]= sight.posted
+        sightings_dict["Images"]= sight.images
+        sightings_dict["Location"]= sight.location
+        coordinates_dict["Latitude"]=sight.latitude
+        coordinates_dict["Longitude"]=sight.longitude
+        # sightings_dict["Coordinates"]=[sight.latitude,sight.longitude]
+        sightings_dict["Coordinates"]=coordinates_dict
+        sightings_list.append(sightings_dict)
+        
+    return jsonify(sightings_list)
 
 @app.route("/api/v1.0/sightingsbystate/")
 def sightings_state():

@@ -69,6 +69,41 @@ d3.json(month_url).then(function (data) {
 
 })
 
+// / Fetch the JSON data and console log it
+d3.json(hour_url).then(function (data) {
+    console.log(data)
+
+    let xValues = [];
+    let yValues = [];
+    // let labels = [];
+
+    for (i = 0; i < data.length; i++) {
+        xValues.push(data[i]['hour'])
+        yValues.push(data[i]['sightings'])
+    }
+
+    console.log(xValues)
+    // trace for bar chart
+    let trace = {
+        x: xValues,
+        y: yValues,
+        type: 'bar',
+        // orientation: 'h'
+    }
+    //data
+    let data1 = [trace];
+
+    //layout
+    let layout = {
+        title: 'Sightings By Hour of Day (UTC)',
+        xaxis: { title: 'Hour' },
+        yaxis: { title: 'Sightings Number' }
+    }
+
+    // Render the plot to the div tag with id "bar"
+    Plotly.newPlot("bar", data1, layout);
+
+})
 
 
 

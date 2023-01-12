@@ -21,6 +21,7 @@ Base.prepare(engine,reflect=True)
 Sighting = Base.classes.sighting
 State = Base.classes.states
 Month = Base.classes.months
+Hour = Base.classes.hours
 
 #################################################
 # Flask Setup
@@ -149,6 +150,24 @@ def sightings_month():
         month_list.append(month_dict)
 
     return jsonify(month_list)
+
+@app.route("/api/v1.0/sightingsbyhour/")
+def sightings_hour():
+    # Create our session (link) from Python to the DB
+    session = Session(engine)
+
+    hour_data = session.query(Hour.id,Hour.hour,Hour.sightings).all()
+
+    session.close()
+
+    hour_list=[]
+    for data in hour_data:
+        hour_dict={}
+        hour_dict["state"]=data.hour
+        hour_dict["sightings"]=data.sightings
+        hour_list.append(hour_dict)
+
+    return jsonify(hour_list)
 
 
 # app.run statement

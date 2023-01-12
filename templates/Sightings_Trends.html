@@ -19,6 +19,7 @@
   <script>const url = "{{url_for('sightings')}}";</script>
   <script>const state_url = "{{url_for('sightings_state')}}";</script>
   <script>const month_url = "{{url_for('sightings_month')}}";</script>
+  <script>const hour_url = "{{url_for('sightings_hour')}}";</script>
 
 </head>
 
@@ -53,11 +54,17 @@
       </div>
         <div class="col-md-5 content-background">
           <!-- Start of Bar Chart -->
-          <h1>Sightings by Month</h1>
+          <h1>Sightings by Month 2022</h1>
           <div id="bar1"></div>
           <!-- End of Bar Chart -->
         </div>
     </div>
+          <div class="col-md-12 content-background">
+            <!-- Start of Bar Chart -->
+            <h1>Sightings by Hour of Day (UTC)</h1>
+            <div id="bar2"></div>
+            <!-- End of Bar Chart -->
+          </div>
   </div>
   <!-- End of Visualization -->
 

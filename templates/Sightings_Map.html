@@ -8,18 +8,25 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <!--Leaflet CSS-->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
-  integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-  crossorigin="" />
-
+  
   <!-- Leaflet JS code-->
   <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
   integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
   crossorigin=""></script>
 
-   <!-- D3 Library -->
-   <script src="https://d3js.org/d3.v5.min.js"></script>
+  <!--Leaflet Heatmap plugin-->
+  <script type="text/javascript" src="{{ url_for('static', filename='js/leaflet-heat.js') }}"></script>
+
+  <!-- D3 Library -->
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+
+  <!-- Leaflet CSS -->
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+  integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+  crossorigin="" />
+
+
   <!-- reset styling -->
   <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}">
   <!-- Boostrap Stylesheet -->
@@ -55,7 +62,7 @@
     <div class="row justify-content-center">
       <div class="col-md-11 content-background">
         <!-- Start of State Pie Chart -->
-        <h1>Testing!</h1>
+        <h1>Sightings!</h1>
         <!-- End of State Pie Chart -->
       </div>
     </div>

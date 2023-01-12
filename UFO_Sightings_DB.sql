@@ -35,3 +35,11 @@ Sightings int);
 
 select * from months;
 
+DROP TABLE if exists hours;
+
+CREATE TABLE hours (
+id int Primary key,
+Hour int,
+Sightings int);
+
+select * from hours;

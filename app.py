@@ -163,7 +163,7 @@ def sightings_hour():
     hour_list=[]
     for data in hour_data:
         hour_dict={}
-        hour_dict["state"]=data.hour
+        hour_dict["hour"]=data.hour
         hour_dict["sightings"]=data.sightings
         hour_list.append(hour_dict)
 

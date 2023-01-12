@@ -1,23 +1,21 @@
+// Bar Chart by state
 // / Fetch the JSON data and console log it
 d3.json(state_url).then(function (data) {
-    console.log(data)
+    // console.log(data)
 
     let xValues = [];
     let yValues = [];
-    // let labels = [];
 
     for (i = 0; i < data.length; i++) {
         xValues.push(data[i]['state'])
         yValues.push(data[i]['sightings'])
     }
 
-    console.log(xValues)
     // trace for bar chart
     let trace = {
         x: xValues,
         y: yValues,
         type: 'bar',
-        // orientation: 'h'
     }
     //data
     let data1 = [trace];
@@ -33,26 +31,25 @@ d3.json(state_url).then(function (data) {
     Plotly.newPlot("bar", data1, layout);
 
 })
+
+// Bar Chart by Month
 // / Fetch the JSON data and console log it
 d3.json(month_url).then(function (data) {
-    console.log(data)
+    // console.log(data)
 
     let xValues = [];
     let yValues = [];
-    // let labels = [];
 
     for (i = 0; i < data.length; i++) {
         xValues.push(data[i]['Date/Time'])
         yValues.push(data[i]['sightings'])
     }
 
-    console.log(xValues)
     // trace for bar chart
     let trace = {
         x: xValues,
         y: yValues,
         type: 'bar',
-        // orientation: 'h'
     }
     //data
     let data1 = [trace];
@@ -64,18 +61,18 @@ d3.json(month_url).then(function (data) {
         yaxis: { title: 'Sightings Number' }
     }
 
-    // Render the plot to the div tag with id "bar"
+    // Render the plot to the div tag with id "bar1"
     Plotly.newPlot("bar1", data1, layout);
 
 })
 
+// Bar Chart by Hour of the day
 // / Fetch the JSON data and console log it
 d3.json(hour_url).then(function (data) {
     console.log(data)
 
     let xValues = [];
     let yValues = [];
-    // let labels = [];
 
     for (i = 0; i < data.length; i++) {
         xValues.push(data[i]['hour'])
@@ -85,10 +82,9 @@ d3.json(hour_url).then(function (data) {
     console.log(xValues)
     // trace for bar chart
     let trace = {
-        x: xValues,
+        x: xValues.map(val => `${val}:00`),
         y: yValues,
         type: 'bar',
-        // orientation: 'h'
     }
     //data
     let data1 = [trace];
@@ -96,12 +92,15 @@ d3.json(hour_url).then(function (data) {
     //layout
     let layout = {
         title: 'Sightings By Hour of Day (UTC)',
-        xaxis: { title: 'Hour' },
+        xaxis: { autotick: false,
+            ticks: 'outside',
+            tickangle: 90,
+            title: 'Hour' },
         yaxis: { title: 'Sightings Number' }
     }
 
-    // Render the plot to the div tag with id "bar"
-    Plotly.newPlot("bar", data1, layout);
+    // Render the plot to the div tag with id "bar2"
+    Plotly.newPlot("bar2", data1, layout);
 
 })
 

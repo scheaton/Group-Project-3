@@ -14,12 +14,16 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 d3.json(url).then(function(response) {
   // console.log(response);
   for (var i = 0; i < response.length; i++) {
-    L.circle(response[i].coordinates, {
-      fillOpacity: 0.75,
-      color: "purple",
-      fillColor: "purple",
-      radius: 50000
-    }).bindPopup(`<h3>${response[i].Location}</h3><hr><b>Date Reported :</b> ${response[i].Date}<br><b>Description :</b> ${response[i].Summary}`).addTo(myMap);
-  }
-  
+    // if (!response[i].coordinates.includes(null)) 
+    if (response[i].coordinates[0] !== null && response[i].coordinates[1] !== null){
+      console.log(response[i].coordinates);
+      L.circle(response[i].coordinates, {
+        fillOpacity: 0.75,
+        color: "purple",
+        fillColor: "purple",
+        radius: 50000
+      }).bindPopup(`<h3>${response[i].Location}</h3><hr><b>Date Reported :</b> ${response[i].Date}<br><b>Description :</b> ${response[i].Summary}`).addTo(myMap);
+    }
+
+    } 
 });

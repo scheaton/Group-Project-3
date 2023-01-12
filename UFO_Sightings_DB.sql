@@ -12,8 +12,8 @@ Posted date,
 Images varchar,
 ReportNum int Primary key,
 Location varchar,
-Latitude decimal,
-Longitude decimal);
+Latitude float,
+Longitude float);
 
 select * from sighting;
 

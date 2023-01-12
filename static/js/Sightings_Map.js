@@ -19,7 +19,7 @@ d3.json(url).then(function(response) {
       color: "purple",
       fillColor: "purple",
       radius: 50000
-    }).bindPopup(`<h2>${response[i].Location}</h2><hr>${response[i].Summary}<hr>`).addTo(myMap);
+    }).bindPopup(`<h3>${response[i].Location}</h3><hr><b>Date Reported :</b> ${response[i].Date}<br><b>Description :</b> ${response[i].Summary}`).addTo(myMap);
   }
   
 });

@@ -1,4 +1,3 @@
-DELETE FROM sighting;
 DROP TABLE if exists sighting;
 
 CREATE TABLE sighting (

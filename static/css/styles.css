@@ -165,6 +165,7 @@ select {
   text-decoration: none;
   margin: 10px;
   font-size: 12px;
+  background-color: transparent;
 }
 
 #map,

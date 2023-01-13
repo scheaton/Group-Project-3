@@ -1,9 +1,4 @@
-// function get random colors for the bar chart
-function getRandomColor() {
-    for (var i = 0; i < 6; i++) {
-        return '#' + (Math.random().toString(16) + '0000000').slice(2, 8);;
-    }
-}
+let config = {responsive: true}
 
 // Bar Chart by state
 // / Fetch the JSON data and console log it
@@ -29,16 +24,14 @@ d3.json(state_url).then(function (data) {
     //layout
     let layout = {
         title: 'Sightings By State (Jul - Dec 2022)',
-        xaxis: {
-            title: 'State',
-            autotick: false,
-            ticks: 'outside',
-            tickangle: 90
-        },
+        xaxis: { title: 'State' },
         yaxis: { title: 'Sightings Number' },
+        paper_bgcolor: 'transparent',
+        plot_bgcolor: 'transparent'
     }
     // Render the plot to the div tag with id "bar"
-    Plotly.newPlot("bar", data1, layout);
+    Plotly.newPlot("bar", data1, layout, config);
+
 })
 
 // Bar Chart by Month
@@ -69,10 +62,12 @@ d3.json(month_url).then(function (data) {
     let layout = {
         title: 'Sightings By Month (Jul - Dec 2022)',
         xaxis: { title: 'Month' },
-        yaxis: { title: 'Sightings Number' }
+        yaxis: { title: 'Sightings Number' },
+        paper_bgcolor: 'transparent',
+        plot_bgcolor: 'transparent'
     }
     // Render the plot to the div tag with id "bar1"
-    Plotly.newPlot("bar1", data1, layout);
+    Plotly.newPlot("bar1", data1, layout, config);
 
 })
 
@@ -106,12 +101,14 @@ d3.json(hour_url).then(function (data) {
             autotick: false,
             ticks: 'outside',
             tickangle: 90,
-            title: 'Hour (UTC)'
-        },
-        yaxis: { title: 'Sightings Number' }
+            title: 'Hour (UTC)' },
+        yaxis: { title: 'Sightings Number' },
+        paper_bgcolor: 'transparent',
+        plot_bgcolor: 'transparent'
     }
     // Render the plot to the div tag with id "bar2"
-    Plotly.newPlot("bar2", data1, layout);
+    Plotly.newPlot("bar2", data1, layout, config);
+
 })
 
 

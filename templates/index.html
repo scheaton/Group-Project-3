@@ -1,41 +1,30 @@
 {% extends 'navbar.html' %}
 
+
 {% block title %}Home{% endblock %}
+
 
 {% block head %}
 <script src="https://use.typekit.net/nlq1kdt.js"></script>
 <script>try { Typekit.load({ async: true }); } catch (e) { }</script>
 {% endblock %}
 
-{% block background %}
+
+{% block content %}
 <div id="container">
   <video id="background_video" loop muted></video>
   <div id="video_cover"></div>
   <div id="overlay"></div>
-
-  <div id="video_controls">
-    <span id="play">
-      <img src="{{url_for('static', filename='js/plugin_bideo/play.png')}}">
-    </span>
-    <span id="pause">
-      <img src="{{url_for('static', filename='js/plugin_bideo/pause.png')}}">
-    </span>
-  </div>
-{% endblock %}
-
-{% block content %}
-
   <section class="content-background" id="index_page">
     <div>
-      <h1>The truth is out there.</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <h1>WE ARE NOT ALONE</h1>
+      <p>In 2022 alone, there were <strong>4.3k</strong> reported UFO sightings in the United States. Click around for some visualizations.</p>
     </div>
   </section>
 </div>
 
 <script src="{{url_for('static', filename='js/plugin_bideo/bideo.js')}}"></script>
 <script src="{{url_for('static', filename='js/plugin_bideo/main.js')}}"></script>
-
 {% endblock %}
 
 

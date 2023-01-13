@@ -1,15 +1,13 @@
-/* nav elements */
-.navbar {
-  background-color: transparent;
-  padding-inline: 10px;
-}
+/*******************/
+/*   * CAUTION *   */
+/*  PLUGIN STYLES  */
+/*******************/
 
-/* plugin_bideo */
+/* bideo */
 html,
 body {
   width: 100%;
   height: 100%;
-  overflow: hidden;
 }
 
 #container {
@@ -23,11 +21,9 @@ body {
 
 #background_video {
   position: absolute;
-
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
   object-fit: cover;
   height: 100%;
   width: 100%;
@@ -61,16 +57,10 @@ body {
 #pause {
   display: none;
 }
-
 @media (min-width: 768px) {
   #video_controls {
     display: none;
   }
-}
-
-/* index page specific styles */
-body {
-  text-align: center;
 }
 
 #overlay {
@@ -82,17 +72,10 @@ body {
   background: rgba(0, 0, 0, 0.5);
 }
 
-#index_page {
-  position: absolute;
-  top: 40%;
-  text-align: center;
-  left: 30%;
-  right: 30%;
-}
-
-/* Granim plugin */
+/* Granim */
 #canvas-image-blending {
-  position: absolute;
+  position: fixed;
+  z-index: 1;
   display: block;
   width: 100%;
   height: 100%;
@@ -102,9 +85,31 @@ body {
   left: 0;
 }
 
-/* styles */
+
+/*****************/
+/*  OUR STYLES   */
+/*****************/
+
+/* styling specific to index page */
+#index_page {
+  position: absolute;
+  top: 30%;
+  text-align: center;
+  left: 30%;
+  right: 30%;
+}
+
+/* nav elements */
+.navbar {
+  background-color: transparent;
+  padding-inline: 10px;
+}
+.nav-item {
+  display: inline;
+  z-index: 4;
+}
 .content-background {
-  z-index: 3;
+  z-index: 3 !important;
   font-size: 16px;
   text-decoration-line: none;
   color: black;
@@ -117,11 +122,9 @@ body {
   padding: 5px;
 }
 
+/* Navbar has to shrink. Otherwise, the options wrap and look weird. */
 @media (max-width: 768px) {
-
-  /* Navbar has to shrink. Otherwise, */
   .content-background {
-    /* the options wrap and look weird. */
     font-size: 14px;
     letter-spacing: 0px;
     margin-left: 5px;
@@ -134,14 +137,12 @@ body {
 }
 
 a:hover {
-  /* links light up when hovered over and overwrite default blue */
-  color: black;
-  background-color: whitesmoke;
+  color: black; /* links light up when hovered over */
+  background-color: whitesmoke; /* overwrite default blue styling */
 }
 
 #selectedStateName {
-  /* dropdown on the same line as current state name */
-  display: inline;
+  display: inline; /* dropdown on the same line as current state name */
   text-transform: capitalize;
   text-align: center;
 }
@@ -165,10 +166,40 @@ select {
   text-decoration: none;
   margin: 10px;
   font-size: 12px;
+  background-color: transparent;
 }
 
-#map,
 body,
 html {
   height: 100%;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+#map {
+  height: 100%;
+  width: 100%;
+}
+
+.map-container {
+  height: 90vh;
+  width: 96vw;
+  margin-top: 1vh;
+  margin-left: 2vw;
+  margin-right: 2vw;
+  margin-bottom: 1vh;
+}
+
+@media (max-width: 768px) {
+  .map-container {
+    height: 90vh;
+    width: 100vw;
+    margin-top: 1vh;
+    margin-left: 0vw;
+    margin-right: 0vw;
+    margin-bottom: 1vh;
+  }
 }

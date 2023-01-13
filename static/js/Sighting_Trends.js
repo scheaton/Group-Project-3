@@ -1,66 +1,76 @@
+// function get random colors for the bar chart
+function getRandomColor() {
+    for (var i = 0; i < 6; i++) {
+        return '#' + (Math.random().toString(16) + '0000000').slice(2, 8);;
+    }
+}
+
 // Bar Chart by state
 // / Fetch the JSON data and console log it
 d3.json(state_url).then(function (data) {
     // console.log(data)
-
     let xValues = [];
     let yValues = [];
-
     for (i = 0; i < data.length; i++) {
         xValues.push(data[i]['state'])
         yValues.push(data[i]['sightings'])
     }
-
     // trace for bar chart
     let trace = {
         x: xValues,
         y: yValues,
         type: 'bar',
+        marker: {
+            color: getRandomColor()
+        }
     }
     //data
     let data1 = [trace];
-
     //layout
     let layout = {
         title: 'Sightings By State (Jul - Dec 2022)',
-        xaxis: { title: 'State' },
-        yaxis: { title: 'Sightings Number' }
+        xaxis: {
+            title: 'State',
+            autotick: false,
+            ticks: 'outside',
+            tickangle: 90
+        },
+        yaxis: { title: 'Sightings Number' },
     }
-
     // Render the plot to the div tag with id "bar"
     Plotly.newPlot("bar", data1, layout);
-
 })
 
 // Bar Chart by Month
 // / Fetch the JSON data and console log it
 d3.json(month_url).then(function (data) {
     // console.log(data)
-
     let xValues = [];
     let yValues = [];
-
     for (i = 0; i < data.length; i++) {
         xValues.push(data[i]['Date/Time'])
         yValues.push(data[i]['sightings'])
     }
-
     // trace for bar chart
     let trace = {
         x: xValues,
         y: yValues,
         type: 'bar',
+        marker: {
+            //     color: ['rgba(204,204,204,1)', 'rgba(222,45,38,0.8)', 'rgba(204,204,204,1)', 'rgba(204,204,204,1)', 
+            // 'rgba(204,204,204,1)']
+            color: ['red', 'blue', 'green', 'orange', 'pink', 'black']
+        },
+        text: yValues.map(String)
     }
     //data
     let data1 = [trace];
-
     //layout
     let layout = {
         title: 'Sightings By Month (Jul - Dec 2022)',
         xaxis: { title: 'Month' },
         yaxis: { title: 'Sightings Number' }
     }
-
     // Render the plot to the div tag with id "bar1"
     Plotly.newPlot("bar1", data1, layout);
 
@@ -69,39 +79,39 @@ d3.json(month_url).then(function (data) {
 // Bar Chart by Hour of the day
 // / Fetch the JSON data and console log it
 d3.json(hour_url).then(function (data) {
-    console.log(data)
-
+    // console.log(data)
     let xValues = [];
     let yValues = [];
-
     for (i = 0; i < data.length; i++) {
         xValues.push(data[i]['hour'])
         yValues.push(data[i]['sightings'])
     }
-
     console.log(xValues)
     // trace for bar chart
     let trace = {
         x: xValues.map(val => `${val}:00`),
         y: yValues,
         type: 'bar',
+        marker: {
+            color: getRandomColor()
+        },
+        text: yValues.map(String)
     }
     //data
     let data1 = [trace];
-
     //layout
     let layout = {
         title: 'Sightings By Hour of Day (UTC) (Jul - Dec 2022)',
-        xaxis: { autotick: false,
+        xaxis: {
+            autotick: false,
             ticks: 'outside',
             tickangle: 90,
-            title: 'Hour (UTC)' },
+            title: 'Hour (UTC)'
+        },
         yaxis: { title: 'Sightings Number' }
     }
-
     // Render the plot to the div tag with id "bar2"
     Plotly.newPlot("bar2", data1, layout);
-
 })
 
 

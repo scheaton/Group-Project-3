@@ -1,6 +1,8 @@
 {% extends 'navbar.html' %}
 
+
 {% block title %}Sightings Map{% endblock %}
+
 
 {% block head %}
 <!-- Leaflet JS code-->
@@ -23,7 +25,8 @@
 <script>const url = "{{url_for('sightings')}}";</script>
 {% endblock %}
 
-{% block background %}
+
+{% block content %}
 <!-- Start of background -->
 <!-- Create a <canvas> element -->
 <canvas id="canvas-image-blending"></canvas>
@@ -32,24 +35,17 @@
 <!-- Create a Granim instance -->
 <script src="{{url_for('static', filename='js/visualization_bg.js')}}"></script>
 <!-- End of background -->
-{% endblock %}
 
-{% block content %}
+
 <!-- Start of Visualization -->
-<div class="container-fluid">
-  <div class="row justify-content-center">
-    <div class="col-md-11 content-background">
-      <!-- Start of State Pie Chart -->
-      <h1>UFO Sightings Map</h1>
-      <!-- End of State Pie Chart -->
-    </div>
-  </div>
+<div class="container-fluid map-container">
+  <div id="map"></div>
 </div>
+<!-- End of Visualization -->
+
 
 <script src="https://d3js.org/d3.v5.min.js"></script>
 <script src='https://cdn.plot.ly/plotly-2.16.1.min.js'></script>
-
-<div id="map"></div>
 <script src="{{url_for('static', filename='js/Sightings_Map.js')}}"></script>
 
 {% endblock %}

@@ -14,7 +14,8 @@ d3.json(url).then(function (response) {
         fillOpacity: 0.75,
         color: "black",
         fillColor: "yellow",
-        radius: 50000
+        radius: 50000, 
+        weight: 1
       }).bindPopup(`<h3>${response[i].Location}</h3><hr><b>Date Reported :</b> ${response[i].Date}<br><b>Description :</b> ${response[i].Summary}`))
 
       heatArray.push([response[i].coordinates[0], response[i].coordinates[1]]);  
@@ -23,14 +24,14 @@ d3.json(url).then(function (response) {
   var heat = L.heatLayer(heatArray, {
     radius: 20,
     blur: 2,
-    gradient: {0.2: 'blue', 0.3: 'lime', 0.5: 'red'}
+    gradient: {0.1: 'blue', 0.3: 'lime', 0.5: 'red'}
   })
   console.log(heatArray)
 
   var sightingMarkers = L.layerGroup(markers)
   var overlayMaps = {
     "Sightings Heatmap": heat,
-    "Sightins Info": sightingMarkers
+    "Sightings Info": sightingMarkers
   };
 
   var street = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {

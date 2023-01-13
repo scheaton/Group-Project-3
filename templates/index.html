@@ -4,39 +4,38 @@
 
 {% block head %}
 <script src="https://use.typekit.net/nlq1kdt.js"></script>
-<script>try{Typekit.load({ async: true });}catch(e){}</script>
+<script>try { Typekit.load({ async: true }); } catch (e) { }</script>
+{% endblock %}
+
+{% block background %}
+<div id="container">
+  <video id="background_video" loop muted></video>
+  <div id="video_cover"></div>
+  <div id="overlay"></div>
+
+  <div id="video_controls">
+    <span id="play">
+      <img src="{{url_for('static', filename='js/plugin_bideo/play.png')}}">
+    </span>
+    <span id="pause">
+      <img src="{{url_for('static', filename='js/plugin_bideo/pause.png')}}">
+    </span>
+  </div>
 {% endblock %}
 
 {% block content %}
-  <div id="container">
-    <video id="background_video" loop muted></video>
-    <div id="video_cover"></div>
-    <div id="overlay"></div>
 
-    <div id="video_controls">
-      <span id="play">
-        <img src="{{url_for('static', filename='js/plugin_bideo/play.png')}}">
-      </span>
-      <span id="pause">
-        <img src="{{url_for('static', filename='js/plugin_bideo/pause.png')}}">
-      </span>
+  <section class="content-background" id="index_page">
+    <div>
+      <h1>The truth is out there.</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
     </div>
+  </section>
+</div>
 
-    <section class="content-background" id="index_page">
-      <div>
-        <h1>The truth is out there.</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-      </div>
-    </section>
-  </div>
-
-  <div id="footer">
-    <a href="https://www.youtube.com/watch?v=w7JrHIHi8t0" target="_blank">
-      Lorem ipsum dolor sit amet.
-    </a>
-  </div>
-
-  <script src="{{url_for('static', filename='js/plugin_bideo/bideo.js')}}"></script>
-  <script src="{{url_for('static', filename='js/plugin_bideo/main.js')}}"></script>
+<script src="{{url_for('static', filename='js/plugin_bideo/bideo.js')}}"></script>
+<script src="{{url_for('static', filename='js/plugin_bideo/main.js')}}"></script>
 
 {% endblock %}
+
+

@@ -6,45 +6,42 @@
 <script>const sightings_url = "{{url_for('sightings')}}";</script>
 {% endblock %}
 
-{% block content %}
-  <!-- Start of background -->
-  <!-- Create a <canvas> element -->
-  <canvas id="canvas-image-blending"></canvas>
-  <!-- Call the Granim Plugin script -->
-  <script src="{{url_for('static', filename='js/plugin_granim/dists/granim.js')}}"></script>
-  <!-- Create a Granim instance -->
-  <script src="{{url_for('static', filename='js/visualization_bg.js')}}"></script>
-  <!-- End of background -->
+{% block background %}
+<!-- Start of background -->
+<!-- Create a <canvas> element -->
+<canvas id="canvas-image-blending"></canvas>
+<!-- Call the Granim Plugin script -->
+<script src="{{url_for('static', filename='js/plugin_granim/dists/granim.js')}}"></script>
+<!-- Create a Granim instance -->
+<script src="{{url_for('static', filename='js/visualization_bg.js')}}"></script>
+<!-- End of background -->
+{% endblock %}
 
-  <!-- Start of Visualization -->
-  <div class="container-fluid">
-    <div class="row justify-content-center">
-      <div class="col-md-5 content-background">
-        <!-- Start of State Pie Chart -->
-        <h3 id="selectedStateName">ALABAMA  </h3><select id="selectedStateAbbrev" onchange="optionChanged(this.value)"></select>
-        <div id="statePieChart"></div>
-        <!-- End of State Pie Chart -->
-      </div>
-      <div class="col-md-5 content-background">
-        <!-- Start of National Pie Chart -->
-        <h3>UNITED STATES</h3>
-        <div id="usPieChart"></div>
-        <!-- End of State Pie Chart -->
-      </div>
+{% block content %}
+<!-- Start of Visualization -->
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <div class="col-md-5 content-background">
+      <!-- Start of State Pie Chart -->
+      <h3 id="selectedStateName">ALABAMA </h3><select id="selectedStateAbbrev"
+        onchange="optionChanged(this.value)"></select>
+      <div id="statePieChart"></div>
+      <!-- End of State Pie Chart -->
+    </div>
+    <div class="col-md-5 content-background">
+      <!-- Start of National Pie Chart -->
+      <h3>UNITED STATES</h3>
+      <div id="usPieChart"></div>
+      <!-- End of State Pie Chart -->
     </div>
   </div>
-  <!-- End of Visualization -->
+</div>
+<!-- End of Visualization -->
 
-  <div id="footer">
-    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
-      Lorem ipsum dolor.
-    </a>
-  </div>
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src='https://cdn.plot.ly/plotly-2.16.1.min.js'></script>
 
-  <script src="https://d3js.org/d3.v5.min.js"></script>
-  <script src='https://cdn.plot.ly/plotly-2.16.1.min.js'></script>
-
-  <script src="{{url_for('static', filename='js/usStates.js')}}"></script>
-  <script src="{{url_for('static', filename='js/UFO_Shapes.js')}}"></script>
+<script src="{{url_for('static', filename='js/usStates.js')}}"></script>
+<script src="{{url_for('static', filename='js/UFO_Shapes.js')}}"></script>
 
 {% endblock %}

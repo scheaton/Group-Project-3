@@ -1,9 +1,10 @@
 ## Project-3
 
-## UFO Sightings Reported in USA
-
 **Team Members:** AJ Domingo, Samuel Heaton, Alice Johnson, Jananee Arjunan, Mia Gallucci
 
+## UFO Sightings Reported in USA
+
+![Top_Image](https://user-images.githubusercontent.com/112193116/212521106-dba04ca4-6526-45c1-bf1b-af28998a25a7.png)
 
 **PROJECT SCOPE**
 

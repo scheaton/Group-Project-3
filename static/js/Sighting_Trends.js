@@ -1,3 +1,5 @@
+let config = {responsive: true}
+
 // Bar Chart by state
 // / Fetch the JSON data and console log it
 d3.json(state_url).then(function (data) {
@@ -24,11 +26,13 @@ d3.json(state_url).then(function (data) {
     let layout = {
         title: 'Sightings By State (Jul - Dec 2022)',
         xaxis: { title: 'State' },
-        yaxis: { title: 'Sightings Number' }
+        yaxis: { title: 'Sightings Number' },
+        paper_bgcolor: 'transparent',
+        plot_bgcolor: 'transparent'
     }
 
     // Render the plot to the div tag with id "bar"
-    Plotly.newPlot("bar", data1, layout);
+    Plotly.newPlot("bar", data1, layout, config);
 
 })
 
@@ -58,11 +62,13 @@ d3.json(month_url).then(function (data) {
     let layout = {
         title: 'Sightings By Month (Jul - Dec 2022)',
         xaxis: { title: 'Month' },
-        yaxis: { title: 'Sightings Number' }
+        yaxis: { title: 'Sightings Number' },
+        paper_bgcolor: 'transparent',
+        plot_bgcolor: 'transparent'
     }
 
     // Render the plot to the div tag with id "bar1"
-    Plotly.newPlot("bar1", data1, layout);
+    Plotly.newPlot("bar1", data1, layout, config);
 
 })
 
@@ -96,11 +102,13 @@ d3.json(hour_url).then(function (data) {
             ticks: 'outside',
             tickangle: 90,
             title: 'Hour (UTC)' },
-        yaxis: { title: 'Sightings Number' }
+        yaxis: { title: 'Sightings Number' },
+        paper_bgcolor: 'transparent',
+        plot_bgcolor: 'transparent'
     }
 
     // Render the plot to the div tag with id "bar2"
-    Plotly.newPlot("bar2", data1, layout);
+    Plotly.newPlot("bar2", data1, layout, config);
 
 })
 

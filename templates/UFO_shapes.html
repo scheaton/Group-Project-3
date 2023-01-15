@@ -1,12 +1,15 @@
 {% extends 'navbar.html' %}
 
+
 {% block title %}UFO Shapes{% endblock %}
+
 
 {% block head %}
 <script>const sightings_url = "{{url_for('sightings')}}";</script>
 {% endblock %}
 
-{% block background %}
+
+{% block content %}
 <!-- Start of background -->
 <!-- Create a <canvas> element -->
 <canvas id="canvas-image-blending"></canvas>
@@ -15,9 +18,8 @@
 <!-- Create a Granim instance -->
 <script src="{{url_for('static', filename='js/visualization_bg.js')}}"></script>
 <!-- End of background -->
-{% endblock %}
 
-{% block content %}
+
 <!-- Start of Visualization -->
 <div class="container-fluid">
   <div class="row justify-content-center">

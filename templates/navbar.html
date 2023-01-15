@@ -29,34 +29,33 @@
 
 <body>
 
-    {% block background %}{% endblock %}
-
-    <nav class="navbar navbar-expand m-0 p-0">
-        <a href="{{url_for('index')}}" class="content-background" id="home-button">Home</a>
-        <div class="collapse navbar-collapse justify-content-end" id="main-nav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a href="{{url_for('sightings_map')}}" class="content-background">Sightings Heatmap</a>
-                </li>
-                <li class="nav-item">
-                    <a href="{{url_for('ufo_shapes')}}" class="content-background">UFO Shapes</a>
-                </li>
-                <li class="nav-item">
-                    <a href="{{url_for('sightings_trends')}}" class="content-background">Sightings by Trends</a>
-
-                </li>
-            </ul>
+    <nav class="navbar navbar-expand m-0 p-0 bg-transparent">
+        <div class="container-fluid m-0 p-0">
+            <a href="{{url_for('index')}}" class="content-background" id="home-button">Home</a>
+            <div class="collapse navbar-collapse justify-content-end" id="main-nav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="{{url_for('sightings_map')}}" class="content-background">Sightings Map</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{url_for('ufo_shapes')}}" class="content-background">UFO Shapes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{url_for('sightings_trends')}}" class="content-background">Sightings by Trends</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
     {% block content %}{% endblock %}
 
     <div id="footer">
-        <a href="https://www.youtube.com/watch?v=w7JrHIHi8t0" target="_blank">
-            Lorem ipsum dolor sit amet.
+        <a href="https://nuforc.org/" target="_blank">
+            Data from UFORC
         </a>
     </div>
-    
+
 </body>
 
 </html>

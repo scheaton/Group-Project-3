@@ -1,6 +1,19 @@
 // Choose how shapes will be organized
-common_shapes_labels = ['Circle', 'Disk', 'Sphere', 'Light', 'Diamond', 'Cigar', 'Rectangle', 'Triangle', 'Oval', 'Formation', 'Changing', 'Other'];
-all_labels_colors =['#1f77b4',  // muted blue
+common_shapes_labels = ['Circle', 'Disk', 'Sphere', 'Oval', 'Cigar', 'Rectangle', 'Diamond', 'Triangle', 'Light', 'Formation', 'Changing', 'Other'];
+all_labels_colors =['#DC143C',  // crimson              circle
+                    '#FA8072',  // salmon               disk
+                    '#B22222',  // firebrick            sphere
+                    '#FFA500',  // orange               oval
+                    '#9ACD32',  // yellowgreen          cigar
+                    '#8FBC8F',  // darkseagreen         rectangle
+                    '#9467bd',  // mutedpurple          diamond
+                    '#17becf',  // blue-teal            triangle
+                    '#ffeb3b',  // yellow               light
+                    '#2ca02c',  // cookedasparagusgreen formation
+                    '#e377c2',  // raspberryyogurtpink  changing
+                    '#7f7f7f'   // middle gray          other
+]
+old_all_labels_colors =['#1f77b4',  // muted blue
                     '#ff7f0e',  // safety orange
                     '#2ca02c',  // cooked asparagus green
                     '#d62728',  // brick red
@@ -70,7 +83,9 @@ function init() {
             marker: {
                 colors: state_labels_colors
               },
-            sort: false // Make labels match from US chart to State chart 
+            sort: false, // Make labels match from US chart to State chart 
+            textinfo: "label+value",
+            textposition: "inside"
         }];
 
         let usData = [{
@@ -81,14 +96,16 @@ function init() {
             marker: {
                 colors: all_labels_colors
               },
-            sort: false // Make labels match from US chart to State chart 
+            sort: false, // Make labels match from US chart to State chart
+            textinfo: "label+value",
+            textposition: "inside"
         }];
 
         let pieLayout = {
         autosize: true,
         margin: {"t": 0, "b": 0, "l": 0, "r": 0},
         paper_bgcolor: 'transparent',
-        legend: {x: 0}
+        showlegend: false
         };
 
         let config = {responsive: true}
@@ -136,7 +153,10 @@ function optionChanged() {
 
         let stateData = {
             values: [state_shapes_values_nonzero],
-            labels: [state_shapes_labels_nonzero]
+            labels: [state_shapes_labels_nonzero],
+            marker: {
+                colors: state_labels_colors
+            }
         }
 
         Plotly.restyle('statePieChart', stateData, [0]);

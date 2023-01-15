@@ -16,9 +16,9 @@ We discovered patterns in the sightings reported to the NUFORC and showcased dat
 
 **DATA SOURCES**
 
- * Nuforc.org: Reportings by Sighting Date, Jul - Dec ‘22, ~2.1K records([https://nuforc.org/webreports/ndxevent.html])
+ * Nuforc.org: Reportings by Sighting Date, Jul - Dec ‘22, ~2K records([https://nuforc.org/webreports/ndxevent.html])
 
- * Google Maps API - Lat/Lng Coordinates
+ * Google Maps API - Latitude/Longitude Coordinates
 
 **DATA EXTRACTION**
 

@@ -11,7 +11,7 @@
  UFO sightings have been reported in all 50 U.S. states during the last century, and the sightings have varied greatly in terms of overall characteristics such as the  UFO shape and size. 
 
 
-  We explored data from the National UFO Reporting Center (NUFORC) on UFO sightings within the U.S. during July - December 2022. During 2022, there were 4.6K total UFO sightings and 2.1K occurred in recent months (July - December 2022). 
+  We explored data from the National UFO Reporting Center (NUFORC) on UFO sightings within the U.S. during July - December 2022. During 2022, there were 4.6K total UFO sightings and 2K occurred in recent months (July - December 2022). 
 We discovered patterns in the sightings reported to the NUFORC and showcased data through visualizations such as a Leaflet heatmap and Plotly charts.
 
 **DATA SOURCES**
@@ -41,9 +41,11 @@ We found that our web scrape from NUFORC was missing one critical element to sup
  
 **FRONT END**
 
- * New JS library / plugins
- * User-driven interactions
- * Multiple pages
+  We utilized two JavaScript libraries not already covered in our class lectures. These two libraries were Bideo.js (for full screen background video) as well as Granim.js (for gradient animations). The bideo.js library is used on the background of our homepage, where a looping UFO montage video plays. We created .js files to establish the functions, set dimensions and resizing, and ensure video played upon the page loading. The Granim.js library is used on the background of the visualization pages, where a fullscreen forest image has a changing gradient overlay. The gradient colors and looping were established in the respective .js files.
+  
+  We sorted our visualizations into three separate pages, based on the style of the visualization (Leaflet heatmap, Plotly pie chart, Plotly bar charts). We organized the files for all of the pages into Template and Static folders (Static folders were organized by .css, .js and image files) and our Template folder contained all of our .html files.
+  
+  To drive engagement, we added several user-driven interactions for our visualizations, such as layers (base and overlay) for the leaflet UFO sightings heatmap, a dropdown for sightings by state and hover and zoom functionalities for the Plotly bar charts. These user interactions were added to the respective .js files for each of our pages. 
 
 **VISUALIZATIONS & DATA FINDINGS**
 

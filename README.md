@@ -60,11 +60,11 @@ We found that our web scrape from NUFORC was missing one critical element to sup
 
    * Heatmap layer showing density of sightings 
    
-     ![Sighting_Heatmap](https://user-images.githubusercontent.com/112193116/212520759-8c5530f1-fe18-4071-9cc9-b46016739a1b.png)
+     ![SIghtings_HeatMap](https://user-images.githubusercontent.com/112193116/212520885-0a01d5ad-6096-4629-97b5-b1804186a9ae.png)
      
 * Pie Chart - UFO Sightings by Shape 
 
-  ![Sightings_By_Shape](https://user-images.githubusercontent.com/112193116/212520760-e9aad8f2-2075-4b90-aa42-4d9b512e2c24.png)
+    ![Sightings_By_Shape](https://user-images.githubusercontent.com/112193116/212520760-e9aad8f2-2075-4b90-aa42-4d9b512e2c24.png)
   
 * Bar Chart - UFO Sightings by State 
 
@@ -72,7 +72,8 @@ We found that our web scrape from NUFORC was missing one critical element to sup
 
 * Bar Chart - UFO Sightings by Hour of Day (UTC)  
 
-  ![Sights_BarCharts](https://user-images.githubusercontent.com/112193116/212520764-e959c0f9-0f97-4566-8707-18a44dc08f77.png)
+ 
+   ![SIghts_Charts](https://user-images.githubusercontent.com/112193116/212520888-7a089e9c-dffd-429b-9f7e-9bcdc15cf701.png)
  
 
 

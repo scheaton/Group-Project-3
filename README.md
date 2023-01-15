@@ -55,12 +55,25 @@ We found that our web scrape from NUFORC was missing one critical element to sup
 
 * Leaflet map- UFO Sightings in the U.S 
    * Marker layer with sighting summaries and date
+   
+    ![Sightings_markers](https://user-images.githubusercontent.com/112193116/212520762-ad57e656-0c18-4732-807f-7547b763691b.png)
+
    * Heatmap layer showing density of sightings 
+   
+     ![Sighting_Heatmap](https://user-images.githubusercontent.com/112193116/212520759-8c5530f1-fe18-4071-9cc9-b46016739a1b.png)
+     
 * Pie Chart - UFO Sightings by Shape 
+
+  ![Sightings_By_Shape](https://user-images.githubusercontent.com/112193116/212520760-e9aad8f2-2075-4b90-aa42-4d9b512e2c24.png)
+  
 * Bar Chart - UFO Sightings by State 
+
 * Bar Chart - UFO Sightings by Month 
+
 * Bar Chart - UFO Sightings by Hour of Day (UTC)  
 
+  ![Sights_BarCharts](https://user-images.githubusercontent.com/112193116/212520764-e959c0f9-0f97-4566-8707-18a44dc08f77.png)
+ 
 
 
 

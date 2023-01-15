@@ -61,7 +61,7 @@ We found that our web scrape from NUFORC was missing one critical element to sup
 
    * Heatmap layer showing density of sightings 
    
-     ![SIghtings_HeatMap](https://user-images.githubusercontent.com/112193116/212520885-0a01d5ad-6096-4629-97b5-b1804186a9ae.png)
+    ![SIghtings_HeatMap](https://user-images.githubusercontent.com/112193116/212520885-0a01d5ad-6096-4629-97b5-b1804186a9ae.png)
      
 * Pie Chart - UFO Sightings by Shape 
 

@@ -1,6 +1,7 @@
-let config = {responsive: true}
+let config = { responsive: true }
 
 // Bar Chart by state
+
 // / Fetch the JSON data and console log it
 d3.json(state_url).then(function (data) {
     // console.log(data)
@@ -25,7 +26,12 @@ d3.json(state_url).then(function (data) {
     //layout
     let layout = {
         title: 'Sightings By State (Jul - Dec 2022)',
-        xaxis: { title: 'State' },
+        xaxis: {
+            title: 'State',
+            autotick: false,
+            ticks: 'outside',
+            tickangle: 90,
+        },
         yaxis: { title: 'Sightings Number' },
         paper_bgcolor: 'transparent',
         plot_bgcolor: 'transparent'
@@ -98,10 +104,12 @@ d3.json(hour_url).then(function (data) {
     //layout
     let layout = {
         title: 'Sightings By Hour of Day (UTC) (Jul - Dec 2022)',
-        xaxis: { autotick: false,
+        xaxis: {
+            autotick: false,
             ticks: 'outside',
             tickangle: 90,
-            title: 'Hour (UTC)' },
+            title: 'Hour (UTC)'
+        },
         yaxis: { title: 'Sightings Number' },
         paper_bgcolor: 'transparent',
         plot_bgcolor: 'transparent'

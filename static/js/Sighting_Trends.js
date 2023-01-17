@@ -178,22 +178,6 @@ d3.json(hour_url).then(function (data) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // last 6 month trends
 
 let names = []

@@ -2,7 +2,7 @@ import sqlalchemy
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine,func
-from flask import Flask,jsonify, render_template
+from flask import Flask,jsonify, render_template, url_for
 import pandas as pd
 from config import db_url
 
@@ -45,7 +45,7 @@ def index():
         "UFO_Shapes": ""
     })
 
-@app.route("/Sightings_Map")
+@app.route("/Sightings_Map/")
 def sightings_map():
     return render_template("Sightings_Map.html", pages={
         "Home": "",
@@ -54,7 +54,7 @@ def sightings_map():
         "UFO_Shapes": ""
     })
 
-@app.route("/Sightings_Trends")
+@app.route("/Sightings_Trends/")
 def sightings_trends():
     return render_template("Sightings_Trends.html", pages={
         "Home": "",
@@ -63,7 +63,7 @@ def sightings_trends():
         "UFO_Shapes": ""
     })
 
-@app.route("/UFO_Shapes")
+@app.route("/UFO_shapes/")
 def ufo_shapes():
     return render_template("UFO_Shapes.html", pages={
         "Home": "",

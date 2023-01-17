@@ -1,0 +1,100 @@
+<!doctype html>
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>US UFO Sightings - UFO Shapes</title>
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- reset styling -->
+    <link rel="stylesheet" href="/Group-Project-3/static/css/reset.css">
+
+    <!-- Boostrap Stylesheet -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <!-- Our own CSS stylesheet -->
+    <link rel="stylesheet" href="/Group-Project-3/static/css/styles.css" media="screen">
+    <meta name="keywords" content="css3, html5, js, background video, fullscreen video">
+    <meta name="description" content="description">
+
+    
+<script>const sightings_url = "/Group-Project-3/api/v1.0/sightings/";</script>
+
+
+</head>
+
+<body background="/Group-Project-3/static/img/bg-forest-fullscreen.jpg">
+
+    <nav class="navbar navbar-expand m-0 p-0 bg-transparent">
+        <div class="container-fluid m-0 p-0">
+            <a href="/Group-Project-3/" class="content-background" id="home-button">Home</a>
+            <div class="collapse navbar-collapse justify-content-end" id="main-nav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="/Group-Project-3/Sightings_Map/" class="content-background">Sightings Map</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/Group-Project-3/UFO_shapes/" class="content-background">UFO Shapes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/Group-Project-3/Sightings_Trends/" class="content-background">Sightings by Trends</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    
+<!-- Start of background -->
+<!-- Create a <canvas> element -->
+<canvas id="canvas-image-blending"></canvas>
+<!-- Call the Granim Plugin script -->
+<script src="/Group-Project-3/static/js/plugin_granim/dists/granim.js"></script>
+<!-- Create a Granim instance -->
+<script src="/Group-Project-3/static/js/visualization_bg.js"></script>
+<!-- End of background -->
+
+
+<!-- Start of Visualization -->
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <div class="col-md-5 content-background">
+      <!-- Start of State Pie Chart -->
+      <h3 id="selectedStateName">ALABAMA </h3><select id="selectedStateAbbrev"
+        onchange="optionChanged(this.value)"></select>
+      <div id="statePieChart"></div>
+      <!-- End of State Pie Chart -->
+    </div>
+    <div class="col-md-5 content-background">
+      <!-- Start of National Pie Chart -->
+      <h3>UNITED STATES</h3>
+      <div id="usPieChart"></div>
+      <!-- End of State Pie Chart -->
+    </div>
+  </div>
+</div>
+<!-- End of Visualization -->
+
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src='https://cdn.plot.ly/plotly-2.16.1.min.js'></script>
+
+<script src="/Group-Project-3/static/js/usStates.js"></script>
+<script src="/Group-Project-3/static/js/UFO_shapes.js"></script>
+
+
+
+    <div id="footer">
+        <a href="https://nuforc.org/" target="_blank">
+            Data from UFORC
+        </a>
+    </div>
+
+</body>
+
+</html>

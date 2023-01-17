@@ -57,15 +57,15 @@ We found that our web scrape from NUFORC was missing one critical element to sup
 * Leaflet map- UFO Sightings in the U.S 
    * Marker layer with sighting summaries and date
    
-   ![Markers_Latest](https://user-images.githubusercontent.com/112193116/213015028-991493d4-cf69-462d-9c09-b16421b807c1.png)
-  
+   ![Markers1_latest](https://user-images.githubusercontent.com/112193116/213025048-c12e0be4-9376-4cc8-9abc-74966c97c059.png)
+     
    * Heatmap layer showing density of sightings 
    
    ![Sight_HeatMap_Latest](https://user-images.githubusercontent.com/112193116/213014415-872b108d-d09d-437a-b86b-4ef2d36196bc.png)
      
 * Pie Chart - UFO Sightings by Shape 
 
-    ![Pie_Chart_Latest](https://user-images.githubusercontent.com/112193116/213014407-e8dcae96-e58f-477e-b4a4-3682404541a2.png)
+    ![Pie_charts](https://user-images.githubusercontent.com/112193116/213025055-772c633d-2129-41c9-8971-3f9ca54482d2.png)
   
 * Bar Chart - UFO Sightings by State 
 
@@ -73,7 +73,7 @@ We found that our web scrape from NUFORC was missing one critical element to sup
 
 * Bar Chart - UFO Sightings by Hour of Day (UTC)  
 
-   ![Charts_Latest](https://user-images.githubusercontent.com/112193116/213014784-373279e4-b8e1-41aa-9641-907bff539354.png)
+   ![Charts_Latest](https://user-images.githubusercontent.com/112193116/213025045-a922455f-1d11-489a-9948-4a7d2f9b9fea.png)
 
  
 

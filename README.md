@@ -34,11 +34,9 @@ We found that our web scrape from NUFORC was missing one critical element to sup
   Using PostgreSQL created a  database “ufo_sightings”. This included the “sighting” table which contains all the UFO sightings, the “states” sightings table, the “months” sightings table and the “hours” sightings table. 
 
 **BACK END**
-  * Connect to DB
-  * The data needed for the Visualizations are served by the Flask routes which are craeted using Flask API
-  * Flask freeze formatting
-  * Organize file structure (static, templates, etc.)
- 
+
+  In order to deploy our page to Github Pages, we needed to route our static links to css, js, and img files using url_for to call on our pages correctly. After replacing all the links, we established navbar.html as our base html to avoid repeating our code and ensure the navbar is visible on each page. The base page includes the starter html, style sheet references, jquery, bootstrap formatting, and navbar code.  Each page has specific flask api calls and js file calls so we added code blocks in navbar.html at the title, head, and body to leave space for additional formatting. From there, each page’s html continues the navbar.html code while replacing the specified blocks in the code for customization per page. After formatting is complete, we can then pass the finished build through Freezer.py which freezes all the html files and hardcodes all of our url_for links into links to be deployed from the base_url: https://scheaton.github.io/Group-Project-3/
+
 **FRONT END**
 
   We utilized two JavaScript libraries not already covered in our class lectures. These two libraries were Bideo.js (for full screen background video) as well as Granim.js (for gradient animations). The bideo.js library is used on the background of our homepage, where a looping UFO montage video plays. We created .js files to establish the functions, set dimensions and resizing, and ensure video played upon the page loading. The Granim.js library is used on the background of the visualization pages, where a fullscreen forest image has a changing gradient overlay. The gradient colors and looping were established in the respective .js files.

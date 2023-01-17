@@ -59,7 +59,7 @@ We found that our web scrape from NUFORC was missing one critical element to sup
 * Leaflet map- UFO Sightings in the U.S 
    * Marker layer with sighting summaries and date
    
-    ![SIght_Marker_LAtest](https://user-images.githubusercontent.com/112193116/213014426-77cd76ca-1181-4db4-81cd-1172ec65d9b3.png)
+   ![Markers_Latest](https://user-images.githubusercontent.com/112193116/213015028-991493d4-cf69-462d-9c09-b16421b807c1.png)
   
    * Heatmap layer showing density of sightings 
    

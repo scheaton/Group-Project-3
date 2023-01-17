@@ -76,7 +76,8 @@ We found that our web scrape from NUFORC was missing one critical element to sup
 * Bar Chart - UFO Sightings by Hour of Day (UTC)  
 
  
-   ![SIghts_Charts](https://user-images.githubusercontent.com/112193116/212520888-7a089e9c-dffd-429b-9f7e-9bcdc15cf701.png)
+   ![Sights_latest](https://user-images.githubusercontent.com/112193116/212975879-a584e542-8041-45ff-8ef0-464c3c7c99b6.png)
+
  
 
 
